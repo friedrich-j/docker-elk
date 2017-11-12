@@ -1,0 +1,22 @@
+cluster:
+  name: elasticsearch-default
+
+node:
+  master: true
+  data: true
+
+network.host: 0.0.0.0
+
+path:
+  data: /data/elasticsearch/data
+  logs: /data/elasticsearch/log
+  plugins: /opt/elasticsearch/plugins
+  work: /data/elasticsearch/work
+
+bootstrap.mlockall: true
+
+http:
+  enabled: true
+  compression: true
+  cors:
+    enabled: false

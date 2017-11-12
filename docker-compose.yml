@@ -1,0 +1,13 @@
+version: '2'
+services:
+  elk:
+    build:
+        context: .
+        args:
+            - http_proxy
+            - https_proxy
+            - no_proxy
+    image: friedrichj/elk
+    ports: 
+      - "2120:2120"
+      - "5601:5601"
